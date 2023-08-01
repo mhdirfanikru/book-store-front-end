@@ -1,0 +1,15 @@
+<div class="main">
+    <div class="body">
+      <div>
+        <h1 (click)="landingPage()">Book Store</h1>
+      </div>
+      <div class="right">
+        <fa-icon [icon]="cart" class="icon" (click)="cartPage()">
+        </fa-icon>
+        <p>{{numberOfProductsInCart}}</p>
+        <button (click)="logout()">Logout</button>
+    </div>
+    
+    </div>
+  </div>
+  

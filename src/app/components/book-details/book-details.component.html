@@ -1,0 +1,27 @@
+<div class="container">
+
+    <div *ngIf="isLoading">
+        <div class="loader">Loading...</div>
+    </div>
+
+    <div class="body" *ngIf="!isLoading">
+        <div class="left">
+            <img src="{{bookDetails.image}}">
+        </div>
+        <div class="right">
+            <h1>{{bookDetails.title}}</h1>
+            <p class="subtitle">{{bookDetails.subtitle}}</p>
+            <p class="author">Author : {{bookDetails.authors}}</p>
+            <p class="desciption">{{bookDetails.desc}}</p>
+            <div class="price">
+                <span>Price : {{ bookDetails.price | currencyConversion}}</span>
+            </div>
+
+            <div class="btn">
+                <button (click)="addToCart(bookDetails._id)">Add To Cart</button>
+            </div>
+
+        </div>
+    </div>
+    
+</div>

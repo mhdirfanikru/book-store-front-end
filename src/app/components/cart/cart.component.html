@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<body>
+    <div class="cart-container" >
+      <div *ngIf="isLoading">
+        <div class="loader">Loading...</div>
+      </div>
+      <div class="cart-items-container" *ngIf="cartItems.length !== 0">
+        <div class="cart-items-wrapper">
+     
+          <div class="cart-item-card" *ngFor="let c of cartItems">
+            <img src="{{ c.product.image }}" alt="Product Image" class="cart-item-image">
+            <div class="cart-item-details">
+              <h2 class="cart-item-name">{{ c.product.title }}</h2>
+              <p class="quantity">quantity : {{ c.quantity }}</p>
+            </div>
+            <div class="quantity-price-section">
+              <div class="quantity-section">
+                <span class="decrease-quantity" (click)="decreaseQuantity(c)">-</span>
+                <input type="text" class="cart-item-quantity" [(ngModel)]="c.quantity">
+                <span class="increase-quantity" (click)="increaseQuantity(c)">+</span>
+              </div>
+              <div class="price-section">
+                <div class="remove-icon" (click)="removeCart(c.item)">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!isLoading && cartItems.length === 0 || cartItems.length === undefined" class="empty-cart">
+        <img src="https://img.freepik.com/premium-vector/shopping-cart-with-cross-mark-wireless-paymant-icon-shopping-bag-failure-paymant-sign-online-shopping-vector_662353-912.jpg?w=826"
+          alt="Your Cart Is Empty" class="empty-cart-image">
+        <p>Your cart is empty</p>
+        <button routerLink="">Let's Shop</button>
+      </div>
+    </div>
+  
+  </body>
+  

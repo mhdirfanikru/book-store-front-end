@@ -1,0 +1,46 @@
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+.box {
+    background: rgb(241, 238, 238);
+    margin-top: 40px;
+}
+
+.box:hover {
+    cursor: pointer;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box img {
+    transition: transform 0.3s ease;
+}
+
+.box:hover img {
+    transform: scale(1.1);
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 230px;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}

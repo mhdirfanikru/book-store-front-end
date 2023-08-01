@@ -1,0 +1,62 @@
+.body{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;  
+    padding: 10px;
+    min-height: 70px;
+}
+
+.main{
+    background: rgb(103, 103, 156);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+p{
+    font-size: larger;
+    font-weight: 700;
+}
+
+h1,p{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,p,button:hover{
+    cursor: pointer;
+}
+
+.right {
+    display: flex;
+
+}
+
+p, button {
+    margin-right: 30px;
+}
+
+button{
+    height: 30px;
+    width: 60px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.icon{
+    margin-top: 14px;
+}
+
+.icon:hover{
+    cursor: pointer;
+}

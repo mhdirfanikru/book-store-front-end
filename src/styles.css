@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Optional: This ensures padding and border are included in the element's total width/height */
+  }
+
+
+
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust the height as needed */
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
