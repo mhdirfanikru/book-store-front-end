@@ -17,9 +17,9 @@ export class BookServiceService {
   public cartItemList: CartItem[]= [];
   public productList = new BehaviorSubject<CartItem[]>([]);
 
-  // api = "https://boook-api.onrender.com/api"
+  api = "https://boook-api.onrender.com/api"
 
-  api = "http://localhost:5000/api"
+  // api = "http://localhost:5000/api"
 
   booksData(): Observable<Book[]> {
     return this.http.get<Book[]>(`${this.api}/books`)
